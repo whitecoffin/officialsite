@@ -22,7 +22,7 @@
     <!--ナビゲーションバー-->
     <div class="header-colorChange">
         <nav class="header-nav">
-            <a href="../index.html" class="header-nav-text logo-link">whitecoffin</a>
+            <a href="../index.html" class="header-nav-text logo-link">WhiteCoffin</a>
             <a href="tools.html" class="header-nav-text">TOOLS</a>
             <a href="works.html" class="header-nav-text">WORKS</a>
             <a href="news.html" class="header-nav-text">NEWS</a>
@@ -36,12 +36,18 @@
     <h1>WORKS</h1>
     <h3>これまでに投稿した作品を紹介しています</h3>
 
+    <br><br>
+
+    <h2>※WORKSページとトップページのスライドはまだ準備中です。</h2>
+
+    <br><br>
+
     <!--グリッド表示-->
     <div class="grid-parent">
         <div class="grid-block0">
             <p>クリックで詳細表示</p>
         </div>
-        <div class="grid-block1">
+        <div class="grid-block1" data-micromodal-trigger="modal-1" role="button">
             <img src="../media/Regain.png" class="grid-image" alt="Regain">
         </div>
         <div class="grid-block2">
@@ -76,13 +82,41 @@
         </div>
     </div>
 
+    <!--モーダルコンテンツ-->
+    <div id="modal-1" aria-hidden="true" class="micromodal-slide modal">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true">
+                <header class="modal__header">
+                    <h2 class="modal__title">【鏡音リン】Regain【オリジナル】</h2>
+                    <h3 class="modal__date">投稿日：2021/01/19</h3>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <div id="modal-1-content" class="modal__content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i1O3oXJjXMk?si=Rsdyxw68xWbXh7UY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <footer class="modal__footer">
+                    <h3>Regain(リゲイン)は29曲目にあたる曲で、取り戻すという意味です。</h3>
+                    <h3>(誰かから)取り返すみたいな意味も無くはないんですが、</h3>
+                    <h3>どちらかというと、輝きとかを取り戻すっていう意味で使いました。</h3>
+                    <h3>動画では少しずつ線が増えていく演出がありますが………</h3>
+                    <h3>続きを読む</h3>
+                </footer>
+            </div>
+        </div>
+    </div>
+
     <!--曲一覧-->
 
-
     <!--フッタ-->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiperAction.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
