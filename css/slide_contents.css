@@ -1,0 +1,85 @@
+/*コンテナ要素のスタイル*/
+.swiper-container {
+	width: 100%;
+	height: 350px;
+	margin: 1rem auto;
+	overflow: hidden;
+}
+/*メインのスライドだけ、上部の余白を調節する*/
+.slider {
+	margin-top: 2rem;
+}
+
+/*各スライドのスタイル*/
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/*テキストの色と太さを指定*/
+	color: #212121;
+	font-weight: bold;
+	font-size: max(0.5rem, 1.5vw);
+}
+
+/*スライダ内の画像を親要素サイズに合わせる*/
+.slider-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/*サムネイルのスタイル*/
+.swiper-thumbnail {
+	width: 90%;
+	height: 50px;
+}
+
+/*通常時サムネイルは透過された状態*/
+.swiper-thumbnail .slider-thumbnail-image {
+	opacity: 0.3;
+	transition: opacity 0.5s;
+}
+
+/*アクティブなサムネイルのスタイル*/
+.swiper-slide.swiper-slide-thumb-active .slider-thumbnail-image {
+	opacity: 1;		/*サムネイルの透過率を無くす*/
+}
+
+/*サムネイルがアクティブならp要素は透過する*/
+.swiper-slide.swiper-slide-thumb-active p {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/*p要素を重ねて表示するためのスタイル*/
+.swiper-thumbnail-contents {
+	position: relative;
+}
+.swiper-thumbnail-contents p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #444444;
+}
+
+/*サムネイルを親要素の幅に合わせる*/
+.slider-thumbnail-image {
+	object-fit: cover;
+	width: 100%;
+}
+
+/*矢印ボタンの色を変更*/
+.swiper-button-next,
+.swiper-button-prev {
+	color: #212121;
+}
+
+.slide5 p {
+	color: #aaaaaa;
+}
+
+.slide6 p {
+	color: #979797;
+}
