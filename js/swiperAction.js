@@ -1,6 +1,6 @@
 // サムネイル
 const swiperThumbnail = new Swiper(".swiper-thumbnail", {
-    spaceBetween: 10, //スライド感の余白
+    spaceBetween: 10, //スライド間の余白
     slidesPerView: 6, //一度に表示するスライド枚数
     watchSlidesProgress: true, //スライダーの動きにスライドを追従させる
 });
